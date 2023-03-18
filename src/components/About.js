@@ -28,6 +28,8 @@ const About=(props)=>{
     }
     }
 
+    
+
    return <>
         <div className="accordion container" id="accordionExample">
         <h1 style={{color : props.mode===`dark`?`white`:`black`}}>About</h1>

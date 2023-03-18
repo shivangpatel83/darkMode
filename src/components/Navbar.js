@@ -32,6 +32,12 @@ const Navbar=(props)=>{
           </a>
         </li>
       </ul>
+      <div className="d-flex">
+      <div onClick={()=>{props.changeMode(`danger`)}} style={{width:`25px`, height:`25px`, cursor:`pointer`}} className="bg-danger me-2"></div>
+      <div onClick={()=>{props.changeMode(`info`)}} style={{width:`25px`, height:`25px`, cursor:`pointer`}} className="bg-info me-2"></div>
+      <div onClick={()=>{props.changeMode(`success`)}} style={{width:`25px`, height:`25px`, cursor:`pointer`}} className="bg-success me-2"></div>
+      <div onClick={()=>{props.changeMode(`warning`)}} style={{width:`25px`, height:`25px`, cursor:`pointer`}} className="bg-warning me-2"></div>
+      </div>
       <div className={`form-check form-switch mx-3 text-${props.mode===`light`?`dark`:`light`}`}>
     <input className="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" onClick={props.toggleMode}/>
     <label className="form-check-label " htmlFor="flexSwitchCheckDefault">Enable {props.mode===`light`?`dark`:`light`} Mode</label>
